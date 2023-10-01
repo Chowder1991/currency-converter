@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-converter</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div class="container">
+        <form class="js-form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Przelicznik Walut</legend>
+                <p>
+                    <label>
+                        <span class="form__text">Kwota pln:</span>
+                        <input class="form__input js-amountPLN" type="number" min="0.01" step="0.01" name="PLN" autofocus required>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <span class="form__text">Wybierz walutę:</span>
+                        <select class="form__input js-currency" js-currency>
+                            <option value="EUR">EURO</option>
+                            <option value="GBP">FUNT BRYTYJSKI</option>
+                            <option value="USD">DOLAR AMERYKAŃSKI</option>
+                            <option value="CHF">FRANK SZWAJCARSKI</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <span class="form__result">Po przeliczeniu:</span>
+                    <strong class="js-result"></strong>
+                </p>
+                <button class="form__button">Przelicz</button>
+                <button class="form__button" type="reset">Reset</button>
+            </fieldset>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
